@@ -138,6 +138,9 @@
 			// Note: If you're *not* using AJAX, get rid of this event listener.
 				$form.addEventListener('submit', function(event) {
 
+					console.log('sending analytics event');
+					ga('send', 'event', 'Landing', 'Click', 'About');
+					
 					event.stopPropagation();
 					event.preventDefault();
 
